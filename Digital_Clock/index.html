@@ -5,13 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="time-div">
-        <p id="time">
-            
-        </p>
+    
+    <div id="switch">
+        <div id="clock-button">
+            <p>
+                Clock
+            </p>
+        </div>
+        <div id="stopwatch-button">
+            <p>
+                Stopwatch
+            </p>
+        </div>
+        <div id="timer-button">
+            <p>
+                Timer
+            </p>
+        </div>
     </div>
+
+    <div id="display-block">
+        <div id="clock-div">
+            <p id="display-clock">
+                00 : 00 : 00 
+            </p>
+        </div>
+        <div id="stopwatch-div">
+            <p id="display-stopwatch">
+                00 : 00 : 00 : 000
+            </p>
+            <div id="stopwatch-buttons">
+                <button id="startStopwatch">
+                    Start
+                </button>
+                <button id="stopStopwatch">
+                    Stop
+                </button>
+                <button id="resetStopwatch">
+                    Reset
+                </button>
+            </div>
+        </div>
+        <div id="timer-div">
+            <p id="display-timer">
+                This is Timer Div
+            </p>
+        </div>
+    </div>
+
 </body>
 </html>
