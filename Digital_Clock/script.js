@@ -21,11 +21,15 @@ function startClock() {
 
 function updateClock() {
     const now = new Date();
-    let hr = String(now.getHours()).padStart(2, "0");
+    let time = "AM";
+    if(now.getHours() > 12) {
+        time = "PM";
+    }
+    let hr = String((now.getHours() > 12) ? (now.getHours() - 12) : (now.getHours())).padStart(2, "0");
     let min = String(now.getMinutes()).padStart(2, "0");
     let sec = String(now.getSeconds()).padStart(2, "0");
 
-    displayClock.textContent = `${hr} : ${min} : ${sec}`;
+    displayClock.textContent = `${hr} : ${min} : ${sec} ${time}`;
 }
 
 function stopClock() {
