@@ -50,10 +50,25 @@ const stopStopwatch = document.getElementById("stopStopwatch");
 const resetStopwatch = document.getElementById("resetStopwatch");
 const display = document.getElementById("display-stopwatch");
 
+// disable the stop button :
+stopStopwatch.disabled = true;
+resetStopwatch.disabled = true;
+// update the opacity :
+stopStopwatch.style.opacity = 0.5;
+resetStopwatch.style.opacity = 0.5;
+
 // functions :
 function startWatch() {
     if(watchIntervalID !== null)
         return ;
+
+    startStopwatch.disabled = true;
+    stopStopwatch.disabled = false;
+    resetStopwatch.disabled = false;
+    // reduce the opacity for disabled button :
+    startStopwatch.style.opacity = 0.5;
+    stopStopwatch.style.opacity = 1;
+    resetStopwatch.style.opacity = 1;
 
     start = Date.now();
     watchIntervalID = setInterval(updateWatch, 10);
@@ -76,12 +91,24 @@ function stopWatch() {
     if(watchIntervalID === null)
         return ;
 
+    startStopwatch.disabled = false;
+    stopStopwatch.disabled = true;
+    startStopwatch.style.opacity = 1;
+    stopStopwatch.style.opacity = 0.5;
+
     elapsedTime += (Date.now() - start);
     clearInterval(watchIntervalID);
     watchIntervalID = null;
 }
 
 function resetWatch() {
+    startStopwatch.disabled = false;
+    stopStopwatch.disabled = true;
+    resetStopwatch.disabled = true;
+
+    stopStopwatch.style.opacity = 0.5;
+    resetStopwatch.style.opacity = 0.5;
+
     elapsedTime = 0;
     displayStopwatch.textContent = "00 : 00 : 00 : 000";
     if(watchIntervalID !== null) {
