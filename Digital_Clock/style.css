@@ -78,3 +78,49 @@ body {
     color: rgb(55, 0, 0);
     font-size: 15px;
 } 
+
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    #switch {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #clock-button p,
+    #stopwatch-button p,
+    #timer-button p {
+        font-size: 24px; 
+    }
+
+    #display-block {
+        width: 85vw; 
+        margin: 20px 0; 
+        padding: 30px 15px; 
+        border-radius: 30px; 
+    }
+
+    #display-clock, 
+    #display-stopwatch, 
+    #display-timer {
+        font-size: 32px; 
+        text-align: center;
+    }
+    #stopwatch-buttons {
+        gap: 8px;
+    }
+
+    #startStopwatch, 
+    #stopStopwatch, 
+    #resetStopwatch {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 2px;
+    }
+}
