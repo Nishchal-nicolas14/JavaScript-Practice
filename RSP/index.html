@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <!-- Used to add Icon to the WebPage -->
+    <link rel="icon" type="Image/png" href="./resources/images/favicon.ico"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="gameHeading">
+        Rock Paper Scissor
+    </h1>
+
+    <!-- Button Section -->
+    <div class="allButtons">
+        <div class="controlButtons">
+            <button id="rockButton">
+                <img src="./resources/images/rock.png" alt="Rock Button Image">
+            </button>
+            <button id="paperButton">
+                <img src="./resources/images/paper.png" alt="Paper Button Image">
+            </button>
+            <button id="scissorButton">
+                <img src="./resources/images/scissors.png" alt="Scissor Button Image">
+            </button>
+        </div>
+        <button id="resetButton">
+            <img src="./resources/images/reset.jpg" alt="Reset Button Image">
+        </button>
+    </div>
+
+    <!-- Show the result for some Time -->
+     <div class="" id="showResult">
+        
+     </div>
+
+    <!-- table for getting the record of win, losses and tie -->
+     <table class="numberRecord">
+        <tr>
+            <th>Win</th>
+            <th>Lose</th>
+            <th>Tie</th>
+        </tr>
+        <tr>
+            <td id="winRecord">0</td>
+            <td id="loseRecord">0</td>
+            <td id="tieRecord">0</td>
+        </tr>
+     </table>
+
+</body>
+</html>
